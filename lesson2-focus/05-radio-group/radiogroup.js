@@ -32,6 +32,11 @@
         e.preventDefault();
 
         // This seems like a good place to do some stuff :)
+        if (this.focusedIdx === 0){
+          this.focusedIdx = 4;
+        }else{
+          this.focusedIdx -= 1;
+        }
 
         break;
 
@@ -42,7 +47,11 @@
 
         e.preventDefault();
 
-        // This seems like a good place to do some stuff :)
+          if (this.focusedIdx === 4){
+            this.focusedIdx = 0;
+          }else{
+            this.focusedIdx += 1;
+          }
 
         break;
       }
